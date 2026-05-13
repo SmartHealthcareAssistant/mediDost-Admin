@@ -38,7 +38,7 @@ const StatusBadge = ({ status }) => {
 
 const DetailModal = ({ item, setSelectedItem, handleVerification }) => {
   const type = item.specialization ? "Doctor" : "Pharmacy";
-  const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://medidost-backend.onrender.com";
 
   // ---------------------------------------
   // DOCUMENT MAP INCLUDING LICENSE

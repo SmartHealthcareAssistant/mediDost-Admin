@@ -1,4 +1,4 @@
-const API_URL =  "http://localhost:5000/api/admin/auth";
+const API_URL =  "https://medidost-backend.onrender.com/api/admin/auth";
 
 export const registerAdmin = async (adminData) => {
   try {

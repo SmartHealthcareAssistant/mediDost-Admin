@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/admin";
+const API_URL = "https://medidost-backend.onrender.com/api/admin";
 
 // Fetch doctors
 export const fetchDoctors = async () => {
@@ -47,6 +47,6 @@ export const togglePatientStatus = async (id) => {
 };
 
 export const fetchAnalytics = async () => {
-  const res = await fetch("http://localhost:5000/api/admin/analytics");
+  const res = await fetch("https://medidost-backend.onrender.com/api/admin/analytics");
   return res.json();
 };

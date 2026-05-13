@@ -17,7 +17,7 @@ import {
 import { Users, UserCheck, Activity, ClipboardList } from "lucide-react";
 
 // ===== API Base =====
-const API_URL = "http://localhost:5000/api/admin/analytics";
+const API_URL = "https://medidost-backend.onrender.com/api/admin/analytics";
 
 const Analytics = () => {
   const [loading, setLoading] = useState(true);
