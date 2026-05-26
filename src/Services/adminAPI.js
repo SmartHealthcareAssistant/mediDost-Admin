@@ -1,4 +1,15 @@
-const API_URL = "https://medidost-backend.onrender.com/api/admin";
+const getBackendUrl = () => {
+  if (
+    typeof window !== "undefined" &&
+    (window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1")
+  ) {
+    return "http://localhost:5000";
+  }
+  return "https://medidost-backend.onrender.com";
+};
+
+const API_URL = `${getBackendUrl()}/api/admin`;
 
 // Fetch doctors
 export const fetchDoctors = async () => {
@@ -46,7 +57,14 @@ export const togglePatientStatus = async (id) => {
   return res.json();
 };
 
-export const fetchAnalytics = async () => {
-  const res = await fetch("https://medidost-backend.onrender.com/api/admin/analytics");
+export const fetchAnalytics = async (range = "all") => {
+  const res = await fetch(`${API_URL}/analytics?range=${range}`);
+  return res.json();
+};
+
+export const seedDemoData = async () => {
+  const res = await fetch(`${API_URL}/seed-demo-data`, {
+    method: "POST",
+  });
   return res.json();
 };
