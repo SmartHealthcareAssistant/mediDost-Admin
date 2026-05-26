@@ -114,7 +114,7 @@ const DetailModal = ({ item, setSelectedItem, handleVerification }) => {
                   <span>{documentMap[key]}</span>
 
                   <a
-                    href={`${BASE_URL}${item[key]}`}
+                    href={item[key].startsWith("http") ? item[key] : `${BASE_URL}${item[key]}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-indigo-600 hover:text-indigo-900"
